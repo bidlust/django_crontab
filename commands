@@ -1,0 +1,6 @@
+#start beat
+python3 manage.py celery beat --schedule=/tmp/celerybeat-schedule --pidfile=/tmp/django_celerybeat.pid --loglevel=INFO
+
+
+#start worker
+python3 manage.py celery worker -c 4 --loglevel=info
